@@ -36,4 +36,23 @@ Scenario: Positive Case
  
     }
    
+
+
+    Scenario: Random Case
+
+    When(/^I open the link){
+        mainPage.click();
+    }
+
+
+    Then(^I enter valid values){
+        username.setText('standard_user1234');
+        password.setText('secret_sauce');
+    }
+
+
+    And(^I can see add to cart button){
+        loginSuccess.should('be.true');
+ 
+    }
   
